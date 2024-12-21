@@ -14,7 +14,7 @@ pip install --upgrade pip
 
 ### 3. Clone the CompressAI Repository
 ```bash
-git clone https://github.com/InterDigitalInc/CompressAI compressai
+git clone https://github.com/brianlu97010/CompressAI compressai
 ```
 
 ### 4. Install CompressAI
