@@ -54,7 +54,7 @@ Other pretrained models will be released successively.
 ```
 
 ## Running the Demo
-Navigate to the [CompressAI Models Comparison Demo.ipynb](./examples/examples/CompressAI\ Models\ Comparison\ Demo.ipynb) to open the demo notebook:
+Navigate to the [CompressAI Models Comparison Demo.ipynb](./examples/CompressAI%20Models%20Comparison%20Demo.ipynb) to open the demo notebook.
 ```bash
 examples/CompressAI Models Comparison Demo.ipynb
 ```
