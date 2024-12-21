@@ -33,3 +33,6 @@ from .pointcloud import *
 from .sensetime import *
 from .vbr import *
 from .waseda import *
+
+from .stf import SymmetricalTransFormer  # stf model
+from .cnn import WACNN 

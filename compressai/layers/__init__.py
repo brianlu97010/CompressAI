@@ -30,3 +30,5 @@
 from .basic import *
 from .gdn import *
 from .layers import *
+
+from .win_attention import *

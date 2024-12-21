@@ -28,7 +28,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 from .bound_ops import LowerBound
-from .ops import compute_padding, quantize_ste
+from .ops import compute_padding, quantize_ste, ste_round
 from .parametrizers import NonNegativeParametrizer
 
 __all__ = [
@@ -36,4 +36,5 @@ __all__ = [
     "quantize_ste",
     "LowerBound",
     "NonNegativeParametrizer",
+    "ste_round"
 ]

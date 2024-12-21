@@ -1,3 +1,68 @@
+# Modify
+## Steps
+### 1. Create a New Conda Environment
+```bash
+conda create -n compressai python=3.8
+conda activate compressai
+```
+
+### 2. Update `pip`
+```bash
+conda install pip
+pip install --upgrade pip
+```
+
+### 3. Clone the CompressAI Repository
+```bash
+git clone https://github.com/InterDigitalInc/CompressAI compressai
+```
+
+### 4. Install CompressAI
+Navigate to the repository folder and install the package.
+```bash
+cd compressai
+pip install -e .
+pip install -e '.[all]' # install all optional dependencies
+```
+
+## Pre-Trained Models
+Download the pre-trained models for STF and WACNN into the [ckpt](./ckpt/) directory. Ensure the paths are correctly set to load these models during execution.
+Pretrained models (optimized for MSE) trained from scratch using randomly chose 300k images from the OpenImages dataset.
+
+| Method | Lambda | Link                                                                                              |
+| ---- |--------|---------------------------------------------------------------------------------------------------|
+| CNN | 0.0018 | [cnn_0018](https://drive.google.com/file/d/1RPdtyxTtfosuDe1-xtl5JzvnCU2vYnHD/view?usp=sharing)    |
+| CNN | 0.0035 | [cnn_0035](https://drive.google.com/file/d/1L7xvei3Wj4BeSQ3lDBL-pyjEy13RKsjn/view?usp=sharing)    |
+| CNN | 0.0067 | [cnn_0067](https://drive.google.com/file/d/1DDCFFWBUa5cYOgJ9D9HPcwoOigzoJK31/view?usp=sharing)    |
+| CNN | 0.025  | [cnn_025](https://drive.google.com/file/d/1LrAWPlBE6WJUfjiDPGFO8ANSaP5BFEQI/view?usp=sharing)     |
+| STF | 0.0018 | [stf_0018](https://drive.google.com/file/d/15ujpSjif628iwVEay3mAWN-Vyqls3r23/view?usp=sharing) |
+| STF | 0.0035 | [stf_0035](https://drive.google.com/file/d/1OFzZoEaofNgsimBuOPHtgOJiGsR_RS-M/view?usp=sharing)    |
+| STF | 0.0067 | [stf_0067](https://drive.google.com/file/d/1SjhqcKyP3SqVm4yhJQslJ6HgY1E8FcBL/view?usp=share_link) |
+| STF | 0.013  | [stf_013](https://drive.google.com/file/d/1mupv4vcs8wpNdXCPclXghliikJyYjgj-/view?usp=share_link)  |
+| STF | 0.025  | [stf_025](https://drive.google.com/file/d/1rsYgEYuqSYBIA4rfvAjXtVSrjXOzkJlB/view?usp=sharing)     |
+| STF | 0.0483 | [stf_0483](https://drive.google.com/file/d/1cH5cR-0VdsQqCchyN3DO62Sx0WGjv1h8/view?usp=share_link) |
+
+Other pretrained models will be released successively.
+### Citation
+```
+@inproceedings{zou2022the,
+  title={The Devil Is in the Details: Window-based Attention for Image Compression},
+  author={Zou, Renjie and Song, Chunfeng and Zhang, Zhaoxiang},
+  booktitle={CVPR},
+  year={2022}
+}
+```
+
+## Running the Demo
+Navigate to the [examples](./examples/) folder and open the demo notebook:
+```bash
+examples/CompressAI Models Comparison Demo.ipynb
+```
+This notebook demonstrates the comparison of various CompressAI baseline models and the STF, WACNN model.
+
+
+----
+
 <!-- ![ID-CompressAI-logo](assets/ID-compressAI-logo-750x140.svg =750x140) -->
 <a href="url"><img src="docs/source/_static/logo.svg" align="center"></a>
 
