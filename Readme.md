@@ -29,6 +29,8 @@ pip install -e '.[all]' # install all optional dependencies
 Download the pre-trained models for STF and WACNN into the [ckpt](./ckpt/) directory. Ensure the paths are correctly set to load these models during execution.
 Pretrained models (optimized for MSE) trained from scratch using randomly chose 300k images from the OpenImages dataset.
 
+Lambda 越大 -> 越在乎 PSNR
+
 | Method | Lambda | Link                                                                                              |
 | ---- |--------|---------------------------------------------------------------------------------------------------|
 | CNN | 0.0018 | [cnn_0018](https://drive.google.com/file/d/1RPdtyxTtfosuDe1-xtl5JzvnCU2vYnHD/view?usp=sharing)    |
@@ -54,11 +56,46 @@ Other pretrained models will be released successively.
 ```
 
 ## Running the Demo
-Navigate to the [CompressAI Models Comparison Demo.ipynb](./examples/CompressAI%20Models%20Comparison%20Demo.ipynb) to open the demo notebook.
-```bash
-examples/CompressAI Models Comparison Demo.ipynb
+Navigate to the [comparison.ipynb](.examples/comparison.ipynb) to open the demo notebook.
+```bash 
+examples/comparison.ipynb
 ```
+
 This notebook demonstrates the comparison of various CompressAI baseline models and the STF, WACNN model.
+
+## Results Reproduction
+### Kodak dataset with 24 images
+![kodak](./results/Reproduction/kodak.png)
+
+
+| Model | Lambda | PSNR [dB] | MS-SSIM | Bpp    |
+|-------|--------|-----------|---------|--------|
+| WACNN | 0018   | 29.205    | 0.931   | 0.127  |
+| STF   | 0018   | 28.895    | 0.927   | 0.115  |
+| WACNN | 0035   | 30.745    | 0.952   | 0.200  |
+| STF   | 0035   | 30.387    | 0.950   | 0.184  |
+| WACNN | 0067   | 32.293    | 0.968   | 0.298  |
+| STF   | 0067   | 32.136    | 0.968   | 0.299  |
+| WACNN | 025    | 35.903    | 0.986   | 0.648  |
+| STF   | 025    | 35.808    | 0.985   | 0.641  |
+
+---
+
+### CLIC Professional vailidation dataset with 41 high resolution images
+![clic](./results/Reproduction/CLIC..png)
+
+
+| Model | Lambda | PSNR [dB] | MS-SSIM | Bpp    |
+|-------|--------|-----------|---------|--------|
+| WACNN | 0018   | 31.014    | 0.947   | 0.097  |
+| STF   | 0018   | 30.785    | 0.944   | 0.092  |
+| WACNN | 0035   | 32.452    | 0.962   | 0.148  |
+| STF   | 0035   | 32.191    | 0.960   | 0.142  |
+| WACNN | 0067   | 33.810    | 0.972   | 0.217  |
+| STF   | 0067   | 33.700    | 0.972   | 0.225  |
+| WACNN | 025    | 36.907    | 0.985   | 0.490  |
+| STF   | 025    | 36.782    | 0.985   | 0.461  |
+
 
 
 ----

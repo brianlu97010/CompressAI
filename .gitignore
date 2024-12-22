@@ -8,7 +8,11 @@ compressai/version.py
 tags
 venv*/
 venv/
+
+eval_dataset
 **.pth.tar
+
+
 
 # Created by gitignore.io
 ### Python ###
